@@ -11,3 +11,20 @@
     - Wir wollen eine Designschnittstelle die an Mauern erinnert
 - 4 WHICH TYPE IS YOUR WEBSITE
     - Wir wollen eine Personal Homepage
+- 5 WEBSITE STRUCTURE
+    - Wir wollen 5 Webpages haben
+    - Wir wollen einen Feed, Profil, Login
+    - Wir wollen eine Sprache Ladinisch
+- WHAT DO WE WANT: STATIC OR DYNAMIC WEBSITE
+    - Wir machen eine dynamische Webseite
+    - Wir brauchen ein CMS
+    - Wir bieten keinen Support
+- WEBSITE FUNCTIONALITIES
+    - Wir bieten einen immer aktuellen Feed, mit Inhalten aller Nutzer
+    - Wir wollen, dass sich Nutzer Registrieren, ein Profil anlegen und etwas posten
+- WHAT BUDGET DO WE HAVE
+    - Wir haben kein Budget
+- WHICH DEADLINE DO WE HAVE
+    - Wir haben eine Deadline
+- WHAT ADDITIONAL INFORMATION DO WE HAVE
+    - Wir haben keine weiteren Informationen   
