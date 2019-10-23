@@ -1,0 +1,13 @@
+#Dokumentation
+- 1 TODO
+- 2 IS IT COMPLETELY NEW PROJECT OR IT IS REDESIGN/REPROGRAMMING OF EXISTING ONE?
+    - We have no website
+    - Webadress is localhost
+    - We want a completely new website
+- 3 WHAT DO YOU CONCRETELY EXPECT FROM A WEBSITE?
+    - Wir wollen eine Präsentation die präsentierbar ist
+    - Wir wollen den Verkauf nicht steigern
+    - Wir wollen eine gute Benutzerfreundlichkeit und eine möglichst hohe Funktionalität
+    - Wir wollen eine Designschnittstelle die an Mauern erinnert
+- 4 WHICH TYPE IS YOUR WEBSITE
+    - Wir wollen eine Personal Homepage
