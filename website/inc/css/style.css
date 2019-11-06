@@ -1,0 +1,29 @@
+div{
+    margin: 5px;
+    background-color: white;
+    border: transparent 1px solid;
+}
+div.haupt{
+    margin-left: auto;
+    margin-right: auto;
+    height: 1000px;
+    width: 800px;
+    background-color: red;
+    padding: 0px;
+}
+
+h1{
+    padding: 10px;
+}
+
+a{
+    color: red;
+    font-family: Verdana;
+    text-decoration: none;
+}
+a:visited{
+
+}
+a:hover{
+    text-decoration: underline;
+}
