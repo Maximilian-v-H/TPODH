@@ -5,16 +5,18 @@
     - Alex Moroder
     - Maximilian von Hohenbühel
     <br>
-    Wir sind kein Teil eines Webbewerbs
+    Wir sind kein Teil eines Wettbewerbs
 - 2 IS IT COMPLETELY NEW PROJECT OR IS IT A REDESIGN/REPROGRAMMING OF EXISTING ONE?
     <br>
-    Zurzeit haben wir keine eigenen Webseiten
-    Wir arbeiten an einer neuen Webseite.
+    Momentan gibt es noch keine Webseite
+    <br>
+    Wir arbeiten an einer von Grund auf neuen Webseite
 - 3 WHAT DO YOU CONCRETELY EXPECT FROM A WEBSITE?
     <br>
     Unsere Webseite ist für eine Präsentation geeignet und da wir keine Firma haben, ist dies eine rein private Webseite.
     An höchster Stelle stehen für uns eine gute Benutzerfreundlichkeit und eine effiziente und schnelle Webseite mit kurzen Ladezeiten
 - 4 WHICH TYPE IS YOUR WEBSITE
+<br>
     Unser Ziel ist es eine Webseite zu schreiben, die wie ein soziales Netzwerk funktioniert
 - 5 WEBSITE STRUCTURE
     <br>
@@ -23,17 +25,22 @@
     - ein Profil für jeden, welches jeder selbst anpassen kann
     - eine Login und eine Registrierungsseite
     <br>
-    Die Seite wird in Ladinisch verfügbar sein, eine Übersetzung nach Deustch ist jedoch für das nächste Jahrhundert geplant
+    Die Seite wird in Ladinisch verfügbar sein, eine Übersetzung ins Deutsche wird ,wenn zeitlich möglich implementiert
 - 6 WHAT DO WE WANT: STATIC OR DYNAMIC WEBSITE
     <br>
     Wir erstellen eine dynamische Webseite mit integriertem CMS
     Unsere Schulzeit erlaubt uns nicht im nachhinein den Support und die Instandhaltung der Webseite zu garantieren
 - 7 WEBSITE FUNCTIONALITIES
-    - Wir bieten einen immer aktuellen Feed, mit Inhalten aller Nutzer
-    - Wir wollen, dass sich Nutzer Registrieren, ein Profil anlegen und etwas posten
+    <br>
+    Die Hauptfunktion dieser Website soll das Teilen von Inhalten sein
+    <br>
+    Nutzer müssen ein Profil anlegen, um auf ihren Feed und den Posts der anderen zuzugreifen
+    <br>
+    Der Benutzer soll die Moeglichkeit haben Bilder und Texte zu posten, diese Posts koennen dann
+    von anderen Benutzern gesehen und mit einem Like-Dislike-System bewerten
 - 8 WHAT BUDGET DO WE HAVE
-    - Wir haben kein Budget
-- 9 WHICH DEADLINE DO WE HAVE
-    - Wir haben eine Deadline
+    <br>Dies ist eine Schuluebung, das bedeutet wir planen ein nicht komerzielles projekt. Wir planen kein Geld ein- bzw. ausyugeben
+- 9 WHICH DEADLINE DO WE HAVE <br>
+    Am 20/11/2019 muessen diese 10 Punkte abgegeben werden. Das Projekt hat noch kein abgabedatum
 - 10 WHAT ADDITIONAL INFORMATION DO WE HAVE
-    - Wir haben keine weiteren Informationen   
+    - Wir haben keine weiteren Informationen

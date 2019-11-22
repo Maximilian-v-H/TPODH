@@ -1,4 +1,3 @@
-
 const bcrypt = require("bcrypt");
 const sharp = require("sharp");
 const fs = require("fs");

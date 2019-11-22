@@ -9,7 +9,7 @@ CREATE TABLE users (
     uruuid BINARY(16) NOT NULL PRIMARY KEY,
     uruname TEXT NOT NULL,
     urpasswdhash CHAR(60) NOT NULL,
-    uravatar BLOB
+    uravatar BLOB NOT NULL
 );
 
 CREATE TABLE post (
@@ -18,10 +18,8 @@ CREATE TABLE post (
   pimage BLOB,
   pdesc VARCHAR(4096),
   plike INTEGER,
-  pdiss INTEGER,
-  puid INTEGER NOT NULL FOREIGN KEY,
-  
-)
+  pdiss INTEGER
+);
 
 CREATE TABLE entrys (
     eyuuid BINARY(16) NOT NULL PRIMARY KEY,

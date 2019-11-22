@@ -1,4 +1,3 @@
-
 const fs = require("fs");
 
 module.exports = {
@@ -10,7 +9,7 @@ module.exports = {
         host: "localhost",
         user: "root",
         password: "root",
-        database: "tinycloud"
+        database: "database"
     },
     saltrounds: 10/*,
     keys: {

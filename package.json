@@ -2,6 +2,9 @@
   "name": "website-ionisierungsprotokol",
   "version": "1.0.0",
   "dependencies": {
-    
+    "jshint": "^2.10.3"
+  },
+  "devDependencies": {
+    "mysql2": "^2.0.0"
   }
 }
