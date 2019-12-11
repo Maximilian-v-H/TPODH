@@ -1,0 +1,29 @@
+{
+  "name": "tepe-server",
+  "version": "1.0.0",
+  "description": "Express Server for our Schoolproject",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfobz-informatik/website-ionisierungsprotokol.git"
+  },
+  "author": "Maximilian von Hohenbuehel, Alex Moroder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tfobz-informatik/website-ionisierungsprotokol/issues"
+  },
+  "homepage": "https://github.com/tfobz-informatik/website-ionisierungsprotokol#readme",
+  "dependencies": {
+    "@okta/jwt-verifier": "1.0.0",
+    "angular-fontselect": "^0.13.4",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-bearer-token": "2.4.0",
+    "jqwidgets-ng": "^8.3.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "2.17.1"
+  }
+}
