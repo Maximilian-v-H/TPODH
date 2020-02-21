@@ -1,0 +1,11 @@
+  <mat-card class="filterbox">
+    <mat-form-field>
+      <input matInput name="Eventname" type="text" [ngModel]="nameinput" (ngModelChange)="makeName($event)" placeholder="Eventname">
+      <mat-icon matSuffix class="search">search</mat-icon>
+    </mat-form-field>
+
+  <br>
+
+  <div *ngFor="let item of response.filterItemsByName()">
+    <app-e-item *ngIf="item != null && item['Shortname'] != 'no name' && item['Shortname'] != null" [e]="item"></app-e-item>
+  </div>

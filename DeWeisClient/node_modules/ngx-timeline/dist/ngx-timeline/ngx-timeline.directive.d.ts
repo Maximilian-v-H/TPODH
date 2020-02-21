@@ -1,0 +1,20 @@
+import { TemplateRef } from '@angular/core';
+/**
+ * 自定义模板
+ */
+export declare class TimelineDate {
+    templateRef: TemplateRef<any>;
+    constructor(templateRef: TemplateRef<any>);
+}
+export declare class TimelineHeader {
+    templateRef: TemplateRef<any>;
+    constructor(templateRef: TemplateRef<any>);
+}
+export declare class TimelineBody {
+    templateRef: TemplateRef<any>;
+    constructor(templateRef: TemplateRef<any>);
+}
+export declare class TimelineFooter {
+    templateRef: TemplateRef<any>;
+    constructor(templateRef: TemplateRef<any>);
+}

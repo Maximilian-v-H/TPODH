@@ -1,0 +1,44 @@
+<div class="container page-content">
+  <div class="row">
+    <div class="col-sm-12 col-md">
+      <ngx-timeline [events]="users">
+        <ng-template let-user let-index="rowIndex" timelineBody>
+          <!--<div>Picture</div>-->
+          <!--<div>{{user.uid}}</div>-->
+          <div class="button-row">
+            <button type="button" class="btn btn-primary" *ngIf="global.userid == user.uid || global.userid == 1" (click)="editUser(index, eventmodal)"><i class="fa fa-edit"></i></button>
+            <button type="button" class="btn btn-danger" *ngIf="global.userid == user.uid && global.userid != 1 || global.userid != user.uid && global.userid == 1" (click)="deleteUser(index)"><i class="fa fa-trash"></i></button>
+            <button type="button" class="btn btn-outline-success" *ngIf="!global.userid" (click)="login(eventmodal, user)"><i class="fa fa-beer"></i></button>
+          </div>
+        </ng-template>
+      </ngx-timeline>
+    </div>
+    <div class="col-md-2" *ngIf="!global.userid || global.userid == 1">
+      <button type="button" class="btn btn-primary" (click)="addUser(eventmodal)"><i class="fa fa-plus"></i>Create new User</button>
+    </div>
+  </div>
+</div>
+<ng-template #eventmodal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">User</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group full-width-input">
+        <label>Name</label>
+        <input class="form-control" placeholder="UserName" formControlName="uusername" required>
+      </div>
+      <div class="form-group full-width-input">
+        <label>Password</label>
+        <input class="form-control" type="password" formControlName="upassword" required>
+      </div>
+      <div class="button-row">
+        <button type="button" class="btn btn-primary" (click)="modalCallback()">Submit</button>
+        <button type="button" class="btn btn-light" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

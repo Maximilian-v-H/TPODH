@@ -1,0 +1,15 @@
+import { OnInit } from '@angular/core';
+import { TimelineEvent } from './timeline-event';
+import { TimelineDate, TimelineHeader, TimelineBody, TimelineFooter } from './ngx-timeline.directive';
+export declare class NgxTimelineComponent implements OnInit {
+    events: Array<TimelineEvent>;
+    timelineClass: string;
+    timelineStyle: any;
+    dateFormat: string;
+    dateTemplate: TimelineDate;
+    headerTemplate: TimelineHeader;
+    bodyTemplate: TimelineBody;
+    footerTemplate: TimelineFooter;
+    constructor();
+    ngOnInit(): void;
+}

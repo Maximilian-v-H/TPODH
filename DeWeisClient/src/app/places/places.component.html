@@ -1,0 +1,13 @@
+            <div *ngIf="weathpoint">
+                <mat-card>
+                    <mat-card-title>
+                <h1 >{{weathpoint['Detail']['de']['Title']}}</h1>
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                <h3 >{{weathpoint['Detail']['de']['MetaTitle']}}</h3>
+                </mat-card-subtitle>
+                <mat-card-content>
+                <p [innerHTML]="weathpoint['Detail']['de']['IntroText']"></p>
+                </mat-card-content>
+                </mat-card>
+            </div>

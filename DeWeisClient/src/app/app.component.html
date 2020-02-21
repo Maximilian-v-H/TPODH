@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['']">
+        <mat-icon>home</mat-icon>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['user']">
+        <mat-icon>verified_user</mat-icon>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="global.userid">
+      <a class="nav-link" [routerLink]="['posts']">
+        <mat-icon>local_post_office</mat-icon>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['events']">
+        <mat-icon>event_note</mat-icon>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['weather']">
+        <mat-icon>wb_cloudy</mat-icon>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="global.userid">
+      <a class="nav-link" [routerLink]="['']" (click)="global.userid = null">
+        <mat-icon>exit_to_app</mat-icon>
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<footer style="height: 150px"></footer>

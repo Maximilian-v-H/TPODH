@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>{{e["Shortname"]}}</mat-card-title>
+  <mat-card-subtitle>
+    {{ ( (e["DateBegin"]+"").substr(0, 10) == (e["DateEnd"]+"").substr(0, 10) ) ?
+    (e["DateBegin"]+"").substr(0, 10) :
+    ((e["DateBegin"]+"").substr(0, 10) + " bis " + (e["DateEnd"]+"").substr(0, 10))}}
+  </mat-card-subtitle>
+
+  <mat-card-content fxLayout="row" fxLayoutAlign="space-between center" >
+    <p fxFlex="80">{{e["Detail"]["de"]["BaseText"]}}</p>
+    <a (click)="navigate(e['Latitude'], e['Longitude'])" >Detailansicht</a>
+  </mat-card-content>
+</mat-card>
+<br>

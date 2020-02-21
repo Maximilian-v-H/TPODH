@@ -1,0 +1,62 @@
+<table>
+    <tr>
+        <td style="width: 25%">
+            <button mat-raised-button color="primary" (click)="getSouthTyrol()">Toggle South Tyrol Weather</button>
+            <button mat-raised-button color="primary" (click)="clear()">Clear Weatherdata</button>
+        </td>
+        <td style="width: 50%">
+            <div style="height: 500px; width: 800px"
+                 leaflet
+                 [leafletOptions]="options" [leafletFitBounds]="bounds" (leafletMapReady)="onMapReady($event)" (leafletClick)="newCoordinates($event)">
+            </div>
+            <div *ngIf="globals.weathid && weathpoint">
+                <div *ngFor="let text of weathpoint['Detail']['de'] | keyvalue">
+                    <!-- <div *ngIf="text.value"> -->
+                    <h1 *ngIf="text.key == 'Title'">{{text.value}}</h1>
+                    <h3 *ngIf="text.key == 'MetaTitle'">{{text.value}}</h3>
+                    <p *ngIf="text.key == 'IntroText'" [innerHTML]="text.value"></p>
+                    <!-- </div> -->
+                </div>
+                <table>
+                    <tr>
+                        <td *ngFor="let ski of weathpoint['SkiAreas'] | keyvalue">
+                            <!-- <p>{{ski.value['Id']}}</p> -->
+                            <button mat-raised-button color="primary" (click)="toggleSki(ski.key)">Ski {{ski.key}}</button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="skiyes">
+                        <div *ngFor="let skitext of globals.skiplace['Detail']['de'] | keyvalue">
+                            <h1 *ngIf="skitext.key == 'Title'">{{skitext.value}}</h1>
+                            <p *ngIf="skitext.key == 'BaseText'">{{skitext.value}}</p>
+                        </div>
+                        <div>
+                            <h3>{{globals.skiplace['ContactInfos']['de']['CompanyName']}}</h3>
+                            <img [src]="globals.skiplace['ContactInfos']['de']['LogoUrl']" alt="No Logo available">
+                            <!-- <a ng-href="mailto:{{globals.skiplace['ContactInfos']['de']['Email']}}">Email</a> -->
+                            <a [href]="globals.skiplace['ContactInfos']['de']['Url']">Webseite</a>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td style="width: 25%"></td>
+    </tr>
+    <tr *ngIf="mode != 'event'">
+        <td></td>
+        <td *ngIf="showSlide">
+            <ngb-carousel *ngIf="images">
+                <ng-template ngbSlide *ngFor="let img of images; let i = index">
+                    <div class="picsum-img-wrapper">
+                        <img style="width: 800px" [src]="img" alt="Random first slide">
+                    </div>
+                    <div class="carousel-caption" style="color:black">
+                        <h6>{{southtyrol['Conditions'][i]['Weatherdesc']}}</h6>
+                        <p>{{getDate(southtyrol['Conditions'][i]['date'])}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </td>
+        <td></td>
+    </tr>
+</table>
+
