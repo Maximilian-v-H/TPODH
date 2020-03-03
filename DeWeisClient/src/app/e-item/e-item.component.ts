@@ -4,31 +4,22 @@ import {Weatherpoint} from 'src/app/weatherpoint';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-e-item',
-  templateUrl: './e-item.component.html',
-  styleUrls: ['./e-item.component.css']
+    selector: 'app-e-item',
+    templateUrl: './e-item.component.html',
+    styleUrls: ['./e-item.component.css']
 })
 export class EItemComponent implements OnInit {
 
-  @Input() public e: string;
-  private response: Array<any> | any;
-  points: Weatherpoint[] = new Array();
-  place:any;
-  np:any;
-  placeinfo:any;
-  constructor(private http: HttpClient, private router:Router) { }
+    @Input() public e: string;
+    private response: Array<any> | any;
+    points: Weatherpoint[] = new Array();
+    place:any;
+    np:any;
+    placeinfo:any;
+    constructor(private http: HttpClient, private router:Router) { }
 
-  ngOnInit() {
-  }
-
-  public getRandomImage(searchParam: string="Event"){
-    let url: string = "https://pixabay.com/api/?key=15314731-f00b621dcaa81ceaaabd71966&q="
-    this.http.get(url+searchParam).subscribe(data => {
-      // console.log(data);
-      this.response = data
-    });
-    return this.response
-  }
+    ngOnInit() {
+    }
 
     fillPoints(obj:Object){
         for(var prop in obj){
@@ -73,24 +64,24 @@ export class EItemComponent implements OnInit {
     }
 
     something(lat:number, lng:number){
-    if(this.points.length != 0){
-        this.http.get("http://tourism.opendatahub.bz.it/api/Weather/Measuringpoint?elements=0"
+        if(this.points.length != 0){
+            this.http.get("http://tourism.opendatahub.bz.it/api/Weather/Measuringpoint?elements=0"
+                         ).subscribe(
+                         data => {
+                             console.log(data);
+                             this.fillPoints(data);
+                         })
+        }
+        this.np = this.getNearestPoint(lat, lng);
+        this.http.get(`http://tourism.opendatahub.bz.it/api/Weather/Measuringpoint/${this.place}`
                      ).subscribe(
-                     data => {
-                         console.log(data);
-                         this.fillPoints(data);
-                     })
-    }
-    this.np = this.getNearestPoint(lat, lng);
-    this.http.get(`http://tourism.opendatahub.bz.it/api/Weather/Measuringpoint/${this.place}`
-                 ).subscribe(
-    data => {
-        this.http.get(data['LocationInfo']['RegionInfo']['Self']
-                     ).subscribe(
-                     data => {
-                         this.placeinfo = data;
-                         console.log(data);
-                     })
-    })
+        data => {
+            this.http.get(data['LocationInfo']['RegionInfo']['Self']
+                         ).subscribe(
+                         data => {
+                             this.placeinfo = data;
+                             console.log(data);
+                         })
+        })
     }
 }

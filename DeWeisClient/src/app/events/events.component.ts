@@ -23,7 +23,7 @@ export class EventsComponent implements OnInit {
                                 this.response = Event.convert(data);
                             });
     }
-makeName(newValue) {
-    this.response.setName(newValue);
-}
+    makeName(newValue) {
+        this.response.setName(newValue);
+    }
 }
